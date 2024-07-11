@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins overflow-x-hidden;
+  }
+  /* container */
+  .container {
+    @apply max-w-[1600px] w-full px-4 mx-auto;
+  }
+  /* project */
+  .project {
+    @apply bg-fixed bg-cover bg-no-repeat w-full py-28 bg-menu;
+  }
+  .project__title {
+    @apply text-white text-center;
+  }
+  .project__title h2 {
+    @apply text-4xl font-semibold;
+  }
+  .project__title p {
+    @apply font-roboto font-normal;
+  }
+  .project__title img {
+    @apply mx-auto py-6;
+  }
+  .project__tab {
+    @apply flex justify-center;
+  }
+  .project__tab ul {
+    @apply flex gap-6 py-4;
+  }
+  .project__content {
+    @apply w-full flex flex-wrap max-w-[75rem] my-0 mx-auto;
+  }
+  .project__content .project__item {
+    @apply relative m-[4px] w-calc-33p33-8 overflow-hidden cursor-pointer;
+  }
+  .project__content .project__item {
+    @apply lg:w-mobile;
+  }
+  .project__item img {
+    @apply object-cover block duration-300 w-full h-full;
+  }
+  .project__item:hover img {
+    @apply scale-110 img-linear;
+  }
+  .project__item .overlay {
+    @apply absolute w-full h-full top-0 left-0 flex justify-center items-center layer-linear
+    p-1 overflow-hidden duration-500 ease-in-out text-white opacity-0;
+  }
+  .project__item:hover .overlay {
+    @apply opacity-100;
+  }
+  .overlay__text {
+    @apply text-center;
+  }
+  .overlay__text h4 {
+    @apply text-[1.2rem];
+  }
+  .overlay__text p {
+    @apply font-roboto;
+  }
+  .project__tab li.active {
+    @apply text-primary border-b-2 border-primary duration-300;
+  }
+  .project__tab li {
+    @apply cursor-pointer text-white duration-300 border-b-2 border-transparent font-roboto;
+  }
+
+
+  /* readmore */
+  .readmore__wrapper{
+    @apply lg:flex justify-between
+  }
+  .readmore__img{
+    @apply grid grid-cols-5 gap-3 max-w-[40rem]
+    lg:grid-cols-7 
+  }
+  .readmore__img a img{
+    @apply object-cover w-full h-[5rem] blur-[.7px]
+  }
+  .overlay__readmore .cross{
+    @apply hidden bottom-[14.5rem] left-[11.5rem] absolute duration-300 ease-in-out scale-50
+    lg:bottom-[17rem] lg:left-[13.1rem]
+  }
+  .readmore__aboutus--wrap:hover .cross {
+    @apply flex absolute duration-300 ease-in-out scale-110 opacity-50
+  }
+  .readmore__aboutus--wrap .cross:hover {
+    @apply opacity-100 duration-300
+  }
+  .readmore__aboutus svg{
+    @apply w-[2.5rem] bg-white rounded-full border-black
+  }
+}
+
+@layer components{
+    .footer__wrapper{
+        @apply max-w-[1400px] w-full mx-auto
+    }
+    .footer__gallery{
+        @apply grid grid-cols-4 gap-4 justify-center mx-0 my-auto
+    }
+    .footer__gallery a:last-child{
+        @apply translate-x-40 relative 
+    }
+    .footer__gallery img{
+        @apply h-auto w-auto
+    }
+    .footer i{
+        @apply text-primary text-3xl
+    }
+    .footer h4{
+        @apply text-white
+    }
+    .footer p{
+        @apply font-roboto text-pGray
+    }
+    .footer__support{
+        @apply flex gap-4 px-4 py-8 
+    }
+    .footer__news h2{
+        @apply text-white text-[1.4rem]
+    }
+    .footer__news-text ul{
+        @apply py-4
+    }
+    .footer__news-text li{
+        @apply py-1
+    }
+}
+
+@layer utilities {
+  .w-calc-33p33-8 {
+    width: calc(50% - 20px);
+  }
+  .w-mobile {
+    width: calc(25% - 20px);
+  }
+
+  .layer-linear {
+    background: rgba(100, 117, 15, 0.9);
+  }
+  .img-linear {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .footer__x {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer__y {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer__line-t {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer__line-b {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer__line-l {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer__line-r {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
