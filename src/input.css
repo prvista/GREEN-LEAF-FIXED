@@ -98,6 +98,114 @@
   .readmore__aboutus svg{
     @apply w-[2.5rem] bg-white rounded-full border-black
   }
+
+
+  /* shop */
+  .shopBanner{
+    @apply bg-no-repeat bg-cover w-full bg-left-top bg-shop
+  }
+  .shop__card{
+    @apply border border-gray-100 rounded-2xl duration-100 text-center
+    p-10 mb-4
+    hover:border-primary 
+  }
+  .shop__card img{
+    @apply mx-auto 
+  }
+  .shop__card a{
+    @apply relative opacity-0 duration-300 bottom-40 lg:bottom-20 py-[1.5rem] lg:py-[1rem] px-[30%] lg:px-[15%] text-lg font-roboto rounded-md
+  }
+  .shop__card:hover a{
+    @apply duration-300 opacity-100 relative
+  }
+  .shop__card p{
+    @apply text-xl font-semibold text-primary
+  }
+  .shop__card span{
+    @apply text-lg font-medium text-pGray font-roboto
+  }
+  .shop__card h4{
+    @apply text-xl font-roboto font-semibold
+  }
+  .shop__item{
+        @apply mb-5 max-w-[35rem] mx-auto border border-gray-100 rounded-xl duration-300
+    }
+  .shop__item:hover{
+    @apply border-black rounded-xl
+  }
+  .shop__item i{
+      @apply text-black px-3 py-2 font-bold
+      flex items-center cursor-pointer duration-700
+  }
+  .shop__item h4{
+      @apply text-black px-6 py-4 font-bold
+      flex items-center cursor-pointer duration-500 
+  }
+  
+
+  .shop-icons i.open:first-child{
+    @apply hidden
+  }
+  .shop-icons i:first-child{
+    @apply block
+  }
+  .shop-icons i:last-child{
+    @apply hidden
+  }
+  .shop-icons i.open:last-child{
+    @apply block
+  }
+
+  
+
+
+
+
+  .shop__item p{
+      @apply bg-slate-50 h-auto max-h-0 overflow-hidden duration-300 px-10 rounded-xl ease-in-out
+  }
+  .shop__item p.open{
+      @apply max-h-[50rem] bg-slate-50 
+  }
+  .shop__img img{
+      @apply hidden 
+      lg:rounded-sm lg:block
+  }
+  .shop__tab li{
+    @apply cursor-pointer font-semibold text-secondary py-2
+  }
+  .shop__details{
+      @apply hidden
+      /* desktop */
+  }
+  .shop__details.active{
+      @apply block lg:grid lg:grid-cols-3
+  } 
+  .shop__tab-btn.active{
+    @apply border-b-2 border-primary
+  }
+  .shop__tab-btn{
+    @apply border-b-2 border-transparent
+  }
+
+  .shop__module p{
+    @apply font-roboto mt-8 border border-gray-200 w-full p-4 text-lg text-gray-400 rounded-xl duration-300
+  }
+  .shop__module p:hover{
+    @apply border-black 
+  }
+  .shop__module h2{
+    @apply text-[1.4rem] border-b-[3px] border-gray-200 pb-4
+  }
+  .shop__module span{
+    @apply w-[30%] h-[3px] bg-primary block mt-[-3px]
+  }
+  .shop__nav-title h2{
+    @apply text-[1.4rem] border-b-[3px] border-gray-200 pb-4
+  }
+  .shop__nav-title span{
+    @apply w-[30%] h-[3px] bg-primary block mt-[-3px]
+  }
 }
 
 @layer components{
@@ -128,12 +236,16 @@
     .footer__news h2{
         @apply text-white text-[1.4rem]
     }
+    .footer__news h2 span{
+        @apply w-[35px] h-[2px] bg-primary block mt-[10px]
+    }
     .footer__news-text ul{
         @apply py-4
     }
     .footer__news-text li{
         @apply py-1
     }
+
 }
 
 @layer utilities {
@@ -170,4 +282,50 @@
   .footer__line-r {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
   }
+  .footer__after{
+    position: relative;
+    display:inline-block;
+    content: " ";
+    background-color: primary;
+    height: 0.2rem;
+    width: 3rem;
+    align-self: center;
+    bottom: .3rem;
+    right: .5rem;
+  }
+
+  .btn--primary{
+    padding: .8rem 2rem;
+    background-color: #9fba1a;
+    border: 1px solid #9fba1a ;
+    font-weight: 600;
+    color: white;
+    transition: 0.2s ease;
+    font-size: .9rem;
+    &:hover{
+            background-color: #8ba216;
+            color: $clr-secondary;
+            transition: 0.2s ease;
+            border: 1px solid transparent;
+        }
+  }
+
+  .shop-grid{
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+
+  
+  /* .shopBanner-wrap::before{
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 20%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.70);
+  } */
+
 }

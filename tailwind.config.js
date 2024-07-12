@@ -17,6 +17,7 @@ module.exports = {
       },
       backgroundImage:{
         menu:"linear-gradient(rgba(35, 35, 35, 0.94), rgba(35, 35, 35, 0.94)),  url('../img/bg-image.jpg')",
+        shop:"url('../img/shop_banner.jpg')",
       }
     },
   },
