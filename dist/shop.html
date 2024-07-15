@@ -15,6 +15,111 @@
     
   </head>
   <body>
+    <!-- ANNOUNCEMENT BURDEOS -->
+    <section class="announcement">
+      <div class="container">
+        <div class="announcement__wrapper">
+          <div class="announcement__text">
+            <h4>Check our new project made on 26 feb.</h4>
+          </div>
+          <div class="announcement__socials">
+            <ul>
+              <li><i class="fa-brands fa-facebook-f"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-linkedin-in"></i></li>
+              <li><i class="fa-brands fa-vimeo-v"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILS BURDEOS -->
+    <section class="details">
+      <div class="container">
+        <div class="details__wrapper">
+          <div class="details__info--wrap">
+            <!-- phone -->
+            <div class="details__info">
+              <i class="fa-solid fa-phone-flip"></i>
+              <div class="details__text">
+                <h5>Our Phone</h5>
+                <p>+1-617-555-0115</p>
+              </div>
+            </div>
+            <!-- mail -->
+            <div class="details__info">
+              <i class="fa-solid fa-envelope"></i>
+              <div class="details__text">
+                <h5>Email us</h5>
+                <p>+office@example.com</p>
+              </div>
+            </div>
+            <!-- time -->
+            <div class="details__info">
+              <i class="fa-regular fa-clock"></i>
+              <div class="details__text">
+                <h5>Working</h5>
+                <p>M - F: 08.30 to 16.00</p>
+              </div>
+            </div>
+          </div>
+          <img src="../img/logo.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- HEADER BURDEOS-->
+    <header class="header" id="navbar">
+      <div class="container">
+        <div class="header__wrapper flex flex-row py-2 justify-between items-center lg:border-r-[1px] lg:border-l-[1px]
+        lg:border-b-[1px]">
+          <img src="../img/logo.png" alt="" class=" w-[15rem]">
+          <!-- Mobile Side Nav -->
+          <nav>
+            <ul class="header__nav bg-light flex flex-col gap-4 fixed font-roboto
+            text-left w-44 py-5 px-7 top-[0]
+            font-semibold duration-700 right-[-100%] text-l
+            /* desktop */
+            lg:hidden">
+              <li><img src="../img/logo-small.png" alt=""></li>
+              <li><input type="text" placeholder="Search..."></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="#">About Us <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Services <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Blog <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Shop <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Contact</a></li>
+              <div class="toggle__menu--side">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </ul>
+          </nav>
+          <!-- Desktop Nav -->
+          <nav>
+            <ul class="header__nav--desktop">
+              <img src="../img/logo.png" alt="">
+              <li><a href="./index.html">HOME</a></li>
+              <li><a href="#">ABOUT US <i class="fa-solid fa-chevron-down"></i></a></li>
+              <li><a href="#">SERVICES <i class="fa-solid fa-chevron-down"></i></a></li>
+              <li><a href="#">BLOG <i class="fa-solid fa-chevron-down"></i></a></li>
+              <li class="active"><a href="#">SHOP <i class="fa-solid fa-chevron-down"></i></a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="backdrop"></div>
+          <a href="" class="btn bg--green">SERVICES</a>
+        </div>
+      </div>
+    </header>
+
     <!--  - VISTA -->
     <section class="shopBanner">
       <div class="container">
@@ -294,6 +399,11 @@
       </div>
     </section>
 
+    <!-- scroll up -->
+    <div class="scrollUp">
+      <a href="#" class="to-top"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+
     <!-- footer - VISTA -->
     <footer class="footer bg-secondary">
       <div class="footer__wrapper">
@@ -406,11 +516,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
     <!-- connections - VISTA -->
     <script src="./js/gallery.js"></script>
+    <script src="./js/scrollUp.js"></script>
     <script src="./js/cart.js"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/toggleMenu.js"></script>
-
+    <!-- connections BURDEOS -->
+    <script src="./js/toggleNav.js"></script>
+    <script src="./js/stickyHead.js"></script>
   </body>
 </html>
