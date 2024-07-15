@@ -624,6 +624,46 @@
     }
 
 
+
+    
+
+    /* ABOUT SERVICE */
+.aboutService__wrapper {
+  @apply py-24 grid grid-cols-1 gap-10;
+  /* For desktop */
+  @apply lg:grid-cols-3 lg:py-20;
+}
+.aboutService__card {
+  @apply p-10 border border-gray-200 flex flex-row justify-center items-start gap-4 duration-700 ease-in-out cursor-pointer;
+}
+
+.aboutService__card:hover {
+  @apply bg-tertiary text-light;
+}
+
+.aboutService__card:hover i {
+  @apply text-light;
+}
+
+.aboutService__card:hover p {
+  @apply text-light;
+}
+
+.aboutService__card i {
+  @apply text-tertiary text-5xl duration-700 ease-in-out;
+}
+
+.aboutService__text p {
+  @apply font-roboto text-black/60 w-[85%] duration-700 ease-in-out;
+}
+
+.aboutService__text h4 {
+  @apply font-semibold pb-2;
+}
+
+
+
+
     /* OUR TEAM */
   .ourTeam:before{
     @apply inline-block;
