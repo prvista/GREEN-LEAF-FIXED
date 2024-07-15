@@ -18,7 +18,7 @@
   }
   /* project */
   .project {
-    @apply bg-fixed bg-cover bg-no-repeat w-full py-28 bg-menu;
+    @apply bg-fixed bg-cover bg-no-repeat w-full py-28 bg-menu ease-in-out h-auto 
   }
   .project__title {
     @apply text-white text-center
