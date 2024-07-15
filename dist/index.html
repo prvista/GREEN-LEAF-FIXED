@@ -14,8 +14,219 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   </head>
   <body>    
+    <!-- ANNOUNCEMENT BURDEOS -->
+    <section class="announcement">
+      <div class="container">
+        <div class="announcement__wrapper">
+          <div class="announcement__text">
+            <h4>Check our new project made on 26 feb.</h4>
+          </div>
+          <div class="announcement__socials">
+            <ul>
+              <li><i class="fa-brands fa-facebook-f"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-linkedin-in"></i></li>
+              <li><i class="fa-brands fa-vimeo-v"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- DETAILS BURDEOS -->
+    <section class="details">
+      <div class="container">
+        <div class="details__wrapper">
+          <div class="details__info--wrap">
+            <!-- phone -->
+            <div class="details__info">
+              <i class="fa-solid fa-phone-flip"></i>
+              <div class="details__text">
+                <h5>Our Phone</h5>
+                <p>+1-617-555-0115</p>
+              </div>
+            </div>
+            <!-- mail -->
+            <div class="details__info">
+              <i class="fa-solid fa-envelope"></i>
+              <div class="details__text">
+                <h5>Email us</h5>
+                <p>+office@example.com</p>
+              </div>
+            </div>
+            <!-- time -->
+            <div class="details__info">
+              <i class="fa-regular fa-clock"></i>
+              <div class="details__text">
+                <h5>Working</h5>
+                <p>M - F: 08.30 to 16.00</p>
+              </div>
+            </div>
+          </div>
+          <img src="../img/logo.png" alt="">
+        </div>
+      </div>
+    </section>
 
+    <!-- HEADER BURDEOS-->
+    <header class="header" id="navbar">
+      <div class="container">
+        <div class="header__wrapper flex flex-row py-2 justify-between items-center lg:border-r-[1px] lg:border-l-[1px]
+        lg:border-b-[1px]">
+          <img src="../img/logo.png" alt="" class=" w-[15rem]">
+          <!-- Mobile Side Nav -->
+          <nav>
+            <ul class="header__nav bg-light flex flex-col gap-4 fixed font-roboto
+            text-left w-44 py-5 px-7 top-[0]
+            font-semibold duration-700 right-[-100%] text-l
+            /* desktop */
+            lg:hidden">
+              <li><img src="../img/logo-small.png" alt=""></li>
+              <li><input type="text" placeholder="Search..."></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Services <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Blog <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="./shop.html">Shop <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Contact</a></li>
+              <div class="toggle__menu--side">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </ul>
+          </nav>
+          <!-- Desktop Nav -->
+          <nav>
+            <ul class="header__nav--desktop">
+              <img src="../img/logo.png" alt="">
+              <li class="active"><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT US <i class="fa-solid fa-chevron-down"></i></a></li>
+              <li><a href="#">SERVICES <i class="fa-solid fa-chevron-down"></i></a></li>
+              <li><a href="#">BLOG <i class="fa-solid fa-chevron-down"></i></a></li>
+              <li><a href="./shop.html">SHOP <i class="fa-solid fa-chevron-down"></i></a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="backdrop"></div>
+          <a href="" class="btn bg--green">SERVICES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- BANNER BURDEOS-->
+    <section class="banner">
+        <div class="banner__wrapper">
+          <div class="banner__slider">
+            <!-- 1st img -->
+            <div class="banner__card">
+              <img src="../img/bg-image2.jpg" alt="">
+              <div class="banner__text">
+                <h4>PROFESIONAL SOLUTIONS</h4>
+              <h1>Absorbed <br> in the <br> exquisite</h1>
+              <div class="banner__card--btn">
+                <a href="" class="btn bg--light">GET STARTED NOW</a>
+              </div>
+              </div>
+            </div>
+            <!-- 2nd img -->
+            <div class="banner__card">
+              <img src="../img/bg-image.jpg" alt="">
+              <div class="banner__text">
+                <h4>LAWN SOLUTIONS</h4>
+              <h1>Absorbed <br> in the <br> exquisite</h1>
+              <div class="banner__card--btn">
+                <a href="" class="btn bg--light">GET STARTED NOW</a>
+              </div>
+            </div>
+          </div>
+            <!-- 3rd img -->
+            <div class="banner__card">
+              <img src="../img/bg-image3.jpg" alt="">
+              <div class="banner__text">
+                <h4>GARDENING SOLUTIONS</h4>
+              <h1>Absorbed <br> in the <br> exquisite</h1>
+              <div class="banner__card--btn">
+                <a href="" class="btn bg--light">GET STARTED NOW</a>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="banner__button" id="controls">
+            <a class="prev btn bg--chevron"><i class="fa-solid fa-chevron-left"></i></a>
+            <a class="next btn bg--chevron"><i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION BURDEOS-->
+     <section class="cta">
+      <div class="cta__wrapper text-light">
+        <p>We are a landscaping company specialize in residential and commercial landscaping started in 1999 in New York and in 2008 in Los Angeles.</p>
+        <a href="" class="btn bg--white">CONTACT</a>
+      </div>
+     </section>
+
+     <!-- SERVICES BURDEOS-->
+      <section class="service">
+        <div class="container">
+          <div class="service__wrapper">
+            <!-- 1st -->
+            <div class="service__card">
+              <i class="fa-brands fa-pagelines"></i>
+              <div class="service__text">
+                <h4>GARDEN CLEANING</h4>
+                <p>Bibendum lacus gralda placerat consequat sivamus quis hendrerit mauris.</p>
+              </div>
+            </div>
+            <!-- 2nd -->
+            <div class="service__card">
+              <i class="fa-solid fa-plant-wilt"></i>
+              <div class="service__text">
+                <h4>FIELDS HELP</h4>
+                <p>Bibendum lacus gralda placerat consequat sivamus quis hendrerit mauris.</p>
+              </div>
+            </div>
+            <!-- 3rd -->
+            <div class="service__card">
+              <i class="fa-solid fa-users"></i>
+              <div class="service__text">
+                <h4>CERTIFIED EXPERTS</h4>
+                <p>Bibendum lacus gralda placerat consequat sivamus quis hendrerit mauris.</p>
+              </div>
+            </div>
+            <!-- 4th -->
+            <div class="service__card">
+              <i class="fa-solid fa-fan"></i>
+              <div class="service__text">
+                <h4>FLOWERS GROWING</h4>
+                <p>Bibendum lacus gralda placerat consequat sivamus quis hendrerit mauris.</p>
+              </div>
+            </div>
+            <!-- 5th -->
+            <div class="service__card">
+              <i class="fa-solid fa-leaf"></i>
+              <div class="service__text">
+                <h4>ECOLOGY</h4>
+                <p>Bibendum lacus gralda placerat consequat sivamus quis hendrerit mauris.</p>
+              </div>
+            </div>
+            <!-- 6th -->
+            <div class="service__card">
+              <i class="fa-solid fa-users-line"></i>
+              <div class="service__text">
+                <h4>PRUNER EXPERTS</h4>
+                <p>Bibendum lacus gralda placerat consequat sivamus quis hendrerit mauris.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <!-- project - VISTA -->
     <section class="project">
@@ -395,11 +606,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <!-- gallery - VISTA -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <!-- tinyslider BURDEOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <!-- connections - VISTA -->
     <script src="./js/scrollUp.js"></script>
     <script src="./js/gallery.js"></script>
     <script src="./js/project.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/toggleMenu.js"></script>
+    <!-- connections BURDEOS -->
+    <script src="./js/toggleNav.js"></script>
+    <script src="./js/homeSlider.js"></script>
+    <script src="./js/stickyHead.js"></script>
+    
   </body>
 </html>
