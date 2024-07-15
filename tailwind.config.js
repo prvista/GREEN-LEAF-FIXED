@@ -17,7 +17,8 @@ module.exports = {
       },
       backgroundImage:{
         menu:"linear-gradient(rgba(35, 35, 35, 0.94), rgba(35, 35, 35, 0.94)),  url('../img/bg-image.jpg')",
-        shop:"url('../img/shop_banner.jpg')",
+        shop:"linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),   url('../img/shop_banner.jpg')",
+        team:"linear-gradient(rgba(165, 184, 48,1),rgba(165, 184, 48,0.4)), url('../img/lawn-768316_1920.jpg')",
       }
     },
   },
