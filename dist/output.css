@@ -1456,6 +1456,16 @@ body{
   padding-bottom: 1.5rem;
 }
 
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-28{
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -1506,6 +1516,18 @@ body{
 
 .pt-\[75px\]{
   padding-top: 75px;
+}
+
+.pb-28{
+  padding-bottom: 7rem;
+}
+
+.pt-16{
+  padding-top: 4rem;
+}
+
+.pt-20{
+  padding-top: 5rem;
 }
 
 .text-center{
