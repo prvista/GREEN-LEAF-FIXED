@@ -16,6 +16,304 @@
   .container {
     @apply max-w-[1600px] w-full px-4 mx-auto;
   }
+
+  /* BUUUUUUUURDEOS */
+  /* announcement */
+  .announcement{
+    @apply bg-primary text-light font-roboto py-3;
+  }
+  .announcement__wrapper{
+    @apply flex flex-col gap-1 items-center
+    /* desktop */
+    lg:flex-row lg:justify-between;
+  }
+  .announcement__socials ul{
+    @apply flex flex-row gap-5 text-sm;
+  }
+  .announcement__socials ul li i{
+    @apply border-r-[1px] pr-4 cursor-pointer;
+  }
+  .announcement__socials ul li:last-child i{
+    @apply border-none;
+  }
+  /* details */
+  .details__wrapper{
+    @apply flex flex-col gap-2 py-5 px-4
+    /* desktop */
+    lg:flex-row-reverse lg:justify-end lg:gap-[10rem] lg:border-r-[1px] lg:border-l-[1px]
+    lg:border-b-[1px];
+  }
+  .details__info--wrap{
+    @apply flex flex-col gap-2
+    /* desktop */
+    lg:flex-row lg:gap-[10rem];
+  }
+  .details__wrapper img{
+    @apply hidden
+    /* desktop */
+    lg:block;
+  }
+  .details__info{
+    @apply flex flex-row gap-4 items-center;
+  }
+  .details__info i{
+    @apply text-4xl text-primary;
+  }
+  .details__text h5{
+    @apply font-semibold;
+  }
+  .details__text p{
+    @apply text-secondary/70 font-roboto;
+  }
+  .details__text{
+    @apply flex flex-col gap-2;
+  }
+  /* header */
+  .header{
+    @apply z-50 bg-light sticky;
+  }
+  .header.open{
+    @apply fixed -translate-y-[19rem] w-full z-50 animate-fadeDown
+    /* desktop */
+    lg:-translate-y-[10.7rem]
+  }
+  .header.open .header__wrapper{
+    @apply border-none;
+  }
+  .header.open .header__nav{
+    @apply top-[0rem];
+  }
+  .header__wrapper img{
+    @apply block
+    /* desktop */
+    lg:hidden;
+  }
+  .header__wrapper a{
+    @apply hidden
+    /* desktop */
+    lg:block lg:mr-5;
+  }
+  .header__nav.open{
+    @apply -top-[0] -right-0 z-50 w-[18rem] h-[110vh] fixed;
+  }
+  .header.open .header__nav.open{
+    @apply top-[0rem];
+  }
+  .header__nav img{
+    @apply w-[12rem] pb-8;
+  }
+  .header__nav input{
+    @apply border border-gray-300 p-2 w-[14rem] rounded-sm font-normal focus:outline-blue-300 mb-3;
+  }
+  .header__nav a{
+    @apply text-gray-500 justify-between flex flex-row items-center
+  }
+  .header__nav a:hover{
+    @apply text-secondary
+  }
+  .header__nav i{
+    @apply text-sm /* text-gray-500/50*/;
+  }
+  /* HEADER DESKTOP */
+  .header__nav--desktop{
+    @apply hidden
+    /* desktop */
+   lg:flex lg:flex-row lg:gap-2 pr-[35rem]
+  }
+  .header__nav--desktop a{
+    @apply border-r-[1px] pr-5 h-[1.5rem] text-sm items-center flex font-semibold flex-row;
+  }
+  .header__nav--desktop i{
+    @apply pl-3;
+  }
+  .header__nav--desktop a{
+    @apply duration-500 ease-in-out;
+  }
+  .header__nav--desktop li{
+    @apply duration-500 ease-in-out;
+  }
+  .header__nav--desktop .active{
+    @apply text-primary;
+  }
+  .header__nav--desktop .active:after{
+    @apply opacity-100 w-5;
+  }
+  .header__nav--desktop li:hover a{
+    @apply  text-primary;
+  }
+  .header__nav--desktop li:hover::after{
+    @apply  opacity-100 w-8;
+  }
+  .header__nav--desktop li:after{
+    @apply content-[''] w-1 h-[3px] rounded-md bg-primary absolute opacity-0 duration-500 ease-in-out;
+  }
+  /* HEADER DESKTOP STICK*/
+  .header__nav--desktop.open{
+    @apply hidden
+    /* desktop */
+   lg:flex lg:flex-row lg:gap-2 lg:pr-[22rem] lg:items-center
+  }
+  .header__nav--desktop.open img{
+    @apply hidden
+    /* desktop */
+    lg:block lg:w-64 lg:pl-10 pr-5;
+  }
+  .header__nav--desktop.open a{
+    @apply border-none;
+  }
+
+  /* toggle span side */
+  .toggle__menu--side{
+    @apply flex flex-col gap-1 relative translate-x-[13rem] -translate-y-[25rem] cursor-pointer ease-in-out duration-700
+    /* desktop */
+    lg:hidden;
+  }
+  .toggle__menu--side span{
+    @apply content-[*] bg-secondary w-7 h-[.2rem]
+    ease-in-out duration-700;
+  }
+  /* .toggle__menu--side.open span{
+    @apply -translate-y-[19rem];
+  } */
+  .toggle__menu--side span:first-child{
+    @apply h-[.2rem];
+  }
+  .toggle__menu--side.open span:first-child{
+    @apply relative file:h-[.2rem] -rotate-45 top-[1rem] duration-700;
+  }
+  .toggle__menu--side.open span:nth-child(2){
+    @apply h-[.2rem] opacity-0 duration-700;
+  }
+  .toggle__menu--side.open span:last-child{
+    @apply relative h-[.2rem] rotate-45 -bottom-[.08rem]  duration-700;
+  }
+  /* toggle menu */
+  .toggle__menu{
+    @apply flex flex-col gap-1 cursor-pointer
+    /* desktop */
+    lg:hidden;
+  }
+  .toggle__menu span{
+    @apply content-[*] bg-secondary w-7 h-[.2rem]
+    ease-in-out duration-700;
+  }
+  .toggle__menu span:first-child{
+    @apply h-[.2rem];
+  }
+  .toggle__menu.open span:first-child{
+    @apply relative file:h-[.2rem] -rotate-45 top-2 duration-700;
+  }
+  .toggle__menu.open span:nth-child(2){
+    @apply h-[.2rem] opacity-0 duration-700;
+  }
+  .toggle__menu.open span:last-child{
+    @apply relative h-[.2rem] rotate-45 bottom-2 duration-700;
+  }
+  /* backdrop */
+  .backdrop{
+    @apply hidden;
+  }
+  .backdrop.open{
+    @apply block fixed left-0 h-[120vh] w-full bg-secondary/30 backdrop-blur-sm overflow-y-hidden z-20; 
+  }
+  /* sticky backdrop */
+  .header.open .backdrop.open{
+    @apply h-[200vh]; 
+  }
+  /* banner */
+  .banner{
+    @apply text-light;
+  }
+  .banner__card{
+    @apply h-[20rem];
+  }
+  .banner__card img{
+    @apply h-[30rem] object-cover object-center brightness-50
+    /* desktop */
+    lg:w-full lg:h-[60vh];
+  }
+  .banner__text{
+    @apply flex flex-col -translate-y-[27rem] translate-x-5
+    /* desktop */
+    lg:-translate-y-[30rem] lg:translate-x-[20rem];
+  }
+  .banner__text h4{
+    @apply text-2xl font-extrabold underline pb-5;
+  }
+  .banner__text br{
+    @apply block
+    /* destop */
+    lg:hidden;
+  }
+  .banner__text h1{
+    @apply text-7xl font-extrabold leading-[5rem] pb-10
+    /* desktop */
+    lg:w-[40%];
+  }
+  /* .banner__card--btn{
+    @apply animate-textFade;
+  } */
+  .banner__wrapper:hover .banner__button{
+    @apply opacity-100;
+  }
+  .banner__button{
+    @apply relative flex flex-row justify-between -translate-y-56 opacity-0 duration-700
+    /* desktop */
+    lg:-translate-y-40 lg:px-5;
+  }
+  .banner__slider{
+    @apply h-[25rem]
+    /* lg:pt-10; */
+  }
+  /* cta */
+  .cta__wrapper{
+    @apply flex flex-col px-5 py-10  bg-primary font-roboto
+    /* desktop */
+    lg:flex-row lg:justify-between lg:mx-32 lg:p-10 lg:rounded-sm lg:z-10 lg:relative lg:translate-y-5 lg:items-center;
+  }
+  .cta__wrapper p{
+    @apply pb-10
+    /* desktop */
+    lg:pb-0;
+  }
+  .cta__wrapper a{
+    @apply text-center
+  /* desktop */
+  lg:w-[15rem]
+  }
+  /* service */
+  .service__wrapper{
+    @apply py-24 grid grid-cols-1 gap-10
+    /* desktop */
+    lg:grid-cols-3 lg:py-20;
+  }
+  .service__card{
+    @apply bg-lightBlue p-10 border border-gray-200 flex flex-row justify-center items-start gap-4 duration-700 ease-in-out
+  }
+  .service__card:hover{
+    @apply bg-tertiary text-light
+  }
+  .service__card:hover i{
+    @apply text-light
+  }
+  .service__card:hover p{
+    @apply text-light 
+  }
+  .service__card i{
+    @apply text-tertiary text-5xl duration-700 ease-in-out
+  }
+  .service__text p{
+    @apply font-roboto text-black/60 w-[85%] duration-700 ease-in-out
+  }
+  .service__text h4{
+    @apply font-semibold pb-2
+  }
+
+
+
+  /* VISSSSSSTA */
+
+
   /* project */
   .project {
     @apply bg-fixed bg-cover bg-no-repeat w-full py-28 bg-menu ease-in-out h-auto 
@@ -391,5 +689,34 @@
     display: block;
     background-color: rgba(0, 0, 0, 0.70);
   } */
+
+  
+  .btn{
+    @apply py-4 px-7 bg-transparent border border-transparent rounded-md;
+  }
+  .btn.bg--light {
+    @apply bg-light text-secondary font-roboto underline text-sm font-bold duration-300 ease-in
+    hover:bg-primary hover:text-light hover:no-underline ;
+  }
+  .btn.bg--chevron {
+    @apply bg-light text-secondary duration-300 ease-in py-6 px-8 rounded-none cursor-pointer
+    hover:bg-secondary hover:text-light;
+  }
+  .btn.bg--white {
+    @apply bg-light text-tertiary py-3 font-bold duration-300 ease-in hover:bg-tertiary hover:text-white;
+  }
+  .btn.bg--green {
+    @apply bg-primary text-white font-roboto py-3 rounded-none font-bold duration-300 ease-in hover:bg-tertiary hover:text-white;
+  }
+  /* slider */
+  .banner__card.tns-slide-active h1{
+    @apply animate-textFade;
+  }
+  .banner__card.tns-slide-active h4{
+    @apply animate-textFade;
+  }
+  .banner__card.tns-slide-active .banner__card--btn{
+    @apply animate-textFade;
+  }
 
 }
