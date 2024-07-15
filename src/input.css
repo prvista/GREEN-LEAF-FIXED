@@ -431,133 +431,295 @@
   .shop__item{
         @apply mb-5 max-w-[35rem] mx-auto border border-gray-100 rounded-xl duration-300
     }
-  .shop__item:hover{
-    @apply border-black rounded-xl
-  }
-  .shop__item i{
-      @apply text-black px-3 py-2 font-bold
-      flex items-center cursor-pointer duration-700
-  }
-  .shop__item h4{
-      @apply text-black px-6 py-4 font-bold
-      flex items-center cursor-pointer duration-500 
-  }
-  .shop-icons i.open:first-child{
-    @apply hidden
-  }
-  .shop-icons i:first-child{
-    @apply block
-  }
-  .shop-icons i:last-child{
-    @apply hidden
-  }
-  .shop-icons i.open:last-child{
-    @apply block
-  }
-  .shop__item p{
-      @apply bg-slate-50 h-auto max-h-0 overflow-hidden duration-300 px-10 rounded-xl ease-in-out
-  }
-  .shop__item p.open{
-      @apply max-h-[50rem] bg-slate-50 pb-4
-  }
-  .shop__img img{
-      @apply hidden 
-      lg:rounded-sm lg:block
-  }
-  .shop__tab li{
-    @apply cursor-pointer font-semibold text-secondary py-2
-  }
-  .shop__details{
+    body {
+      @apply font-poppins overflow-x-hidden;
+    }
+    /* container */
+    .container {
+      @apply max-w-[1600px] w-full px-4 mx-auto;
+    }
+    /* project */
+    .project {
+      @apply bg-fixed bg-cover bg-no-repeat w-full py-28 bg-menu;
+    }
+    .project__title {
+      @apply text-white text-center
+    }
+    .project__title h2 {
+      @apply text-4xl font-semibold;
+    }
+    .project__title p {
+      @apply font-roboto font-normal;
+    }
+    .project__title img {
+      @apply mx-auto py-6;
+    }
+    .project__tab {
+      @apply flex justify-center;
+    }
+    .project__tab ul {
+      @apply flex gap-6 py-4;
+    }
+    .project__content {
+      @apply w-full flex flex-wrap max-w-[75rem] my-0 mx-auto;
+    }
+    .project__content .project__item {
+      @apply relative m-[4px] w-calc-33p33-8 overflow-hidden cursor-pointer;
+    }
+    .project__content .project__item {
+      @apply lg:w-mobile;
+    }
+    .project__item img {
+      @apply object-cover block duration-300 w-full h-full;
+    }
+    .project__item:hover img {
+      @apply scale-110 img-linear;
+    }
+    .project__item .overlay {
+      @apply absolute w-full h-full top-0 left-0 flex justify-center items-center layer-linear
+      p-1 overflow-hidden duration-500 ease-in-out text-white opacity-0;
+    }
+    .project__item:hover .overlay {
+      @apply opacity-100;
+    }
+    .overlay__text {
+      @apply text-center;
+    }
+    .overlay__text h4 {
+      @apply text-[1.2rem];
+    }
+    .overlay__text p {
+      @apply font-roboto pt-4;
+    }
+    .project__tab li.active {
+      @apply text-primary border-b-2 border-primary duration-300;
+    }
+    .project__tab li {
+      @apply cursor-pointer text-white duration-300 border-b-2 border-transparent font-roboto;
+    }
+
+
+    /* readmore */
+    .readmore__wrapper{
+      @apply lg:flex justify-between
+    }
+    .readmore__img{
+      @apply grid grid-cols-5 gap-3 max-w-[40rem]
+      lg:grid-cols-7 
+    }
+    .readmore__img a img{
+      @apply object-cover w-full h-[5rem] blur-[.7px]
+    }
+    .overlay__readmore .cross{
+      @apply opacity-0 bottom-[14.5rem] left-[11.5rem] absolute duration-300 ease-in-out scale-50
+      lg:bottom-[17rem] lg:left-[13.1rem]
+    }
+    .readmore__aboutus--wrap:hover .cross {
+      @apply flex absolute duration-300 ease-in-out scale-110 opacity-50
+    }
+    .readmore__aboutus--wrap .cross:hover {
+      @apply opacity-100 duration-300
+    }
+    .readmore__aboutus svg{
+      @apply w-[2.5rem] bg-white rounded-full border-black
+    }
+
+
+    /* shop */
+    .shopBanner{
+      @apply bg-no-repeat bg-cover w-full bg-left-top bg-shop py-24
+    }
+    .shop__card{
+      @apply border border-gray-100 rounded-2xl duration-100 text-center
+      p-10 mb-4
+      hover:border-primary 
+    }
+    .shop__card img{
+      @apply mx-auto 
+    }
+    .shop__card a{
+      @apply relative opacity-0 duration-300 bottom-40 lg:bottom-20 py-[1.5rem] lg:py-[1rem] px-[30%] lg:px-[15%] text-lg font-roboto rounded-md
+    }
+    .shop__card:hover a{
+      @apply duration-300 opacity-100 relative
+    }
+    .shop__card p{
+      @apply text-xl font-semibold text-primary
+    }
+    .shop__card span{
+      @apply text-lg font-medium text-pGray font-roboto
+    }
+    .shop__card h4{
+      @apply text-xl font-roboto font-semibold
+    }
+    .shop__item{
+          @apply mb-5 max-w-[35rem] mx-auto border border-gray-100 rounded-xl duration-300
+    }
+    .shop__item:hover{
+      @apply border-black rounded-xl
+    }
+    .shop__item i{
+        @apply text-black px-3 py-2 font-bold
+        flex items-center cursor-pointer duration-700
+    }
+    .shop__item h4{
+        @apply text-black px-6 py-4 font-bold
+        flex items-center cursor-pointer duration-500 
+    }
+    .shop-icons i.open:first-child{
       @apply hidden
-      /* desktop */
-  }
-  .shop__details.active{
-      @apply block lg:grid lg:grid-cols-3
-  } 
-  .shop__tab-btn.active{
-    @apply border-b-2 border-primary
-  }
-  .shop__tab-btn{
-    @apply border-b-2 border-transparent
-  }
-  .shop__module p{
-    @apply font-roboto mt-8 border border-gray-200 w-full p-4 text-lg text-gray-400 rounded-xl duration-300
-  }
-  .shop__module p:hover{
-    @apply border-black 
-  }
-  .shop__module h2{
-    @apply text-[1.4rem] border-b-[3px] border-gray-200 pb-4
-  }
-  .shop__module span{
-    @apply w-[30%] h-[3px] bg-primary block mt-[-3px]
-  }
-  .shop__nav-title h2{
-    @apply text-[1.4rem] border-b-[3px] border-gray-200 pb-4
-  }
-  .shop__nav-title span{
-    @apply w-[30%] h-[3px] bg-primary block mt-[-3px]
-  }
+    }
+    .shop-icons i:first-child{
+      @apply block
+    }
+    .shop-icons i:last-child{
+      @apply hidden
+    }
+    .shop-icons i.open:last-child{
+      @apply block
+    }
+    .shop__item p{
+        @apply bg-slate-50 h-auto max-h-0 overflow-hidden duration-300 px-10 rounded-xl ease-in-out
+    }
+    .shop__item p.open{
+        @apply max-h-[50rem] bg-slate-50 pb-4
+    }
+    .shop__img img{
+        @apply hidden 
+        lg:rounded-sm lg:block
+    }
+    .shop__tab li{
+      @apply cursor-pointer font-semibold text-secondary py-2
+    }
+    .shop__details{
+        @apply hidden
+        /* desktop */
+    }
+    .shop__details.active{
+        @apply block lg:grid lg:grid-cols-3
+    } 
+    .shop__tab-btn.active{
+      @apply border-b-2 border-primary
+    }
+    .shop__tab-btn{
+      @apply border-b-2 border-transparent
+    }
+    .shop__module p{
+      @apply font-roboto mt-8 border border-gray-200 w-full p-4 text-lg text-gray-400 rounded-xl duration-300
+    }
+    .shop__module p:hover{
+      @apply border-black 
+    }
+    .shop__module h2{
+      @apply text-[1.4rem] border-b-[3px] border-gray-200 pb-4
+    }
+    .shop__module span{
+      @apply w-[30%] h-[3px] bg-primary block mt-[-3px]
+    }
+    .shop__nav-title h2{
+      @apply text-[1.4rem] border-b-[3px] border-gray-200 pb-4
+    }
+    .shop__nav-title span{
+      @apply w-[30%] h-[3px] bg-primary block mt-[-3px]
+    }
 
 
 
+    
 
-  /* OUR TEAM */
-.ourTeam:before{
-  @apply inline-block;
-}
-.ourTeam__text{
-  @apply max-w-[21.3rem] gap-[1.5rem] p-[2rem]  lg:h-[22.5rem] lg:max-w-[50rem] lg:pt-[5rem] lg:flex lg:flex-col 
-}
-.ourTeam__card{
-  @apply  ml-[1rem] lg:flex  lg:pb-[1rem]  pb-[1rem] lg:justify-center font-roboto
-} 
-.ourTeam__card img{
-  @apply h-[26rem]
-}
-.ourTeam__title{
-  @apply pt-[5rem] 
-}
-.ourTeam__title p{
-  @apply pb-[2rem] 
-}
-.ourTeam__icon i:first-child{
-  @apply mr-2
-}
-.ourTeam__icon i:hover{
-  @apply text-tertiary
-}
-.ourTeam__icon i{
-  @apply duration-300
-}
-.ourTeam{
-  @apply gap-[5rem]
-}
-.ourTeam__title h2{
-  @apply lg:pb-[2rem] pt-10 pb-[1rem]
-}
-.ourTeam__card{
-  @apply lg:scale-[.90]
-}
+    /* ABOUT SERVICE */
 .aboutService__wrapper {
   @apply py-24 grid grid-cols-1 gap-10;
   /* For desktop */
   @apply lg:grid-cols-3 lg:py-20;
 }
+.aboutService__card {
+  @apply p-10 border border-gray-200 flex flex-row justify-center items-start gap-4 duration-700 ease-in-out cursor-pointer;
+}
 
-/* LATEST NEWS */
-.latest__card {
-  @apply border border-gray-400  pb-6 h-auto w-[26rem];
+.aboutService__card:hover {
+  @apply bg-tertiary text-light;
 }
-.latest__parent{
-  @apply grid gap-[1.5rem] lg:grid lg:grid-cols-3
+
+.aboutService__card:hover i {
+  @apply text-light;
 }
-.latest__card p{
-  @apply pt-2 font-roboto font-normal text-base text-pGray
+
+.aboutService__card:hover p {
+  @apply text-light;
 }
-.latest__card a{
-  @apply mt-5 pt-[2rem] font-normal
+
+.aboutService__card i {
+  @apply text-tertiary text-5xl duration-700 ease-in-out;
 }
+
+.aboutService__text p {
+  @apply font-roboto text-black/60 w-[85%] duration-700 ease-in-out;
+}
+
+.aboutService__text h4 {
+  @apply font-semibold pb-2;
+}
+
+
+
+
+    /* OUR TEAM */
+  .ourTeam:before{
+    @apply inline-block;
+  }
+  .ourTeam__text{
+    @apply max-w-[21.3rem] gap-[1.5rem] p-[2rem]  lg:h-[22.5rem] lg:max-w-[50rem] lg:pt-[5rem] lg:flex lg:flex-col 
+  }
+  .ourTeam__card{
+    @apply  ml-[1rem] lg:flex  lg:pb-[1rem]  pb-[1rem] lg:justify-center font-roboto
+  } 
+  .ourTeam__card img{
+    @apply h-[26rem]
+  }
+  .ourTeam__title{
+    @apply pt-[5rem] 
+  }
+  .ourTeam__title p{
+    @apply pb-[2rem] 
+  }
+  .ourTeam__icon i:first-child{
+    @apply mr-2
+  }
+  .ourTeam__icon i:hover{
+    @apply text-tertiary
+  }
+  .ourTeam__icon i{
+    @apply duration-300
+  }
+  .ourTeam{
+    @apply gap-[5rem]
+  }
+  .ourTeam__title h2{
+    @apply lg:pb-[2rem] pt-10 pb-[1rem]
+  }
+  .ourTeam__card{
+    @apply lg:scale-[.90]
+  }
+  .aboutService__wrapper {
+    @apply py-24 grid grid-cols-1 gap-10;
+    /* For desktop */
+    @apply lg:grid-cols-3 lg:py-20;
+  }
+
+  /* LATEST NEWS */
+  .latest__card {
+    @apply border border-gray-400  pb-6 h-auto w-[26rem];
+  }
+  .latest__parent{
+    @apply grid gap-[1.5rem] lg:grid lg:grid-cols-3
+  }
+  .latest__card p{
+    @apply pt-2 font-roboto font-normal text-base text-pGray
+  }
+  .latest__card a{
+    @apply mt-5 pt-[2rem] font-normal
+  }
 }
 
 @layer components{
